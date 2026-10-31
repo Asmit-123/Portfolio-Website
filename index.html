@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asmit Bhattacharyya | AI/ML Engineer · Computer Vision · LLM Apps</title>
+  <meta name="description" content="Asmit Bhattacharyya: AI/ML engineer building YOLO-based computer vision pipelines, LLM-powered reasoning systems and workflow automation. Robotics & IoT enthusiast." />
+  <meta property="og:title" content="Asmit Bhattacharyya | AI/ML Engineer" />
+  <meta property="og:description" content="Computer vision, LLM applications and automation. Explore my projects." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://asmit-123.github.io/Portfolio-Website/" />
+  <meta property="og:image" content="https://asmit-123.github.io/Portfolio-Website/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://asmit-123.github.io/Portfolio-Website/assets/og-image.png" />
+  <meta name="theme-color" content="#05070d" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2305070d'/%3E%3Crect x='3' y='3' width='94' height='94' rx='20' fill='none' stroke='%2322d3ee' stroke-width='4'/%3E%3Ctext x='50' y='68' font-size='54' font-family='monospace' font-weight='700' text-anchor='middle' fill='%2322d3ee'%3EA%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="boot" aria-hidden="true">
+    <div class="boot-box">
+      <pre id="bootLog"></pre>
+      <div class="boot-bar"><span id="bootFill"></span></div>
+    </div>
+  </div>
+
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="glow" id="glow" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#top"><span class="bracket">&lt;</span>asmit<span class="bracket">/&gt;</span></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about"><i>01</i>About</a></li>
+        <li><a href="#experience"><i>02</i>Experience</a></li>
+        <li><a href="#skills"><i>03</i>Skills</a></li>
+        <li><a href="#projects"><i>04</i>Projects</a></li>
+        <li><a href="gallery.html"><i>05</i>Gallery</a></li>
+        <li><a href="#contact"><i>06</i>Contact</a></li>
+        <li><button class="kbd" id="paletteBtn" type="button" aria-label="Open quick navigation">Ctrl K</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-text">
+        <p class="status"><span class="pulse"></span> SYSTEM ONLINE · OPEN TO AI/ML ROLES</p>
+        <h1><span class="small">Hi, I'm</span><span class="name" data-scramble>Asmit Bhattacharyya</span></h1>
+        <p class="typed-line"><span class="prompt">&gt;</span> <span id="typed"></span><span class="caret"></span></p>
+        <p class="lead">I build YOLO-based computer vision pipelines, LLM-powered reasoning systems and automated workflows, and I'm drawn to robotics and IoT. B.Tech in CSE (AI &amp; ML), based in Kolkata.</p>
+        <div class="cta">
+          <a class="btn primary" href="#projects"><span>Explore projects</span></a>
+          <a class="btn ghost" href="./assets/Asmit-Bhattacharyya-Resume.pdf" target="_blank" rel="noopener"><span>Download CV</span></a>
+          <a class="btn ghost" href="#contact"><span>Contact</span></a>
+        </div>
+        <div class="socials">
+          <a href="https://github.com/Asmit-123" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.02 1.76 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg></a>
+          <a href="https://www.linkedin.com/in/asmit-bhattacharyya-37742442a" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></a>
+          <a href="mailto:asmit.voyage@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm9 7.2L4.5 7v.01L12 12.2 19.5 7V7L12 12.2ZM4 8.4V17h16V8.4l-8 5.5-8-5.5Z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <svg class="hud-ring" viewBox="0 0 400 400" aria-hidden="true">
+          <circle class="r-thin" cx="200" cy="200" r="194"/>
+          <circle class="r-ticks" cx="200" cy="200" r="180"/>
+          <circle class="r-arc a1" cx="200" cy="200" r="170"/>
+          <circle class="r-arc a2" cx="200" cy="200" r="188"/>
+          <g class="orbiter"><circle cx="200" cy="6" r="4"/></g>
+        </svg>
+        <div class="frame">
+          <img src="./assets/profile-pic.webp" alt="Portrait of Asmit Bhattacharyya" width="360" height="360" />
+          <div class="scan"></div>
+        </div>
+        <div class="chip c1">YOLO · tracking</div>
+        <div class="chip c2">LLM · SymPy verified</div>
+        <div class="chip c3">FastAPI · live</div>
+      </div>
+      <a class="scroll-cue" href="#about" aria-label="Scroll to About"><span></span></a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="reveal">
+      <h2 class="section-title"><small>// 01</small><span data-scramble>About</span></h2>
+      <div class="about-grid">
+        <div class="about-copy">
+          <p>I'm an aspiring AI/ML engineer who likes taking an idea all the way from a trained model to something people can actually use. My strongest work is in <strong>computer vision</strong> (detection, tracking and turning video into analytics) and <strong>LLM applications</strong>, including pairing model output with symbolic checks so answers can be verified.</p>
+          <p>Most recently I worked as a techno-functional apprentice, building enterprise integrations and automations across SAP, Dynamics 365, HubSpot and Shopify. Outside work I'm into <strong>robotics and IoT</strong>, travel photography and music.</p>
+          <p class="mono-note">Currently exploring: <b>RAG &amp; LLM applications</b> · Learning: <b>deep learning &amp; advanced CV</b></p>
+          <div class="stats">
+          <div class="stat"><b data-count="100" data-prefix="~" data-suffix="+">0</b><span>integration workflows built</span></div>
+          <div class="stat"><b data-count="2">0</b><span>apps deployed live</span></div>
+          <div class="stat"><b data-count="18" id="repoCount">0</b><span>public repositories</span></div>
+          <div class="stat"><b data-count="4">0</b><span>years of B.Tech (AI &amp; ML)</span></div>
+        </div>
+        </div>
+        <div class="about-side"><div class="scroller hud" id="scroller" role="region" aria-roledescription="carousel" aria-label="Photos of Asmit" tabindex="0">
+        <div class="sc-stage">
+          <figure class="sc-slide is-on" style="--img:url('./assets/about/hiking.webp')" data-cap="Me at my second home"><img src="./assets/about/hiking.webp" alt="Asmit hiking on a mossy rock outcrop" /></figure>
+          <figure class="sc-slide" style="--img:url('./assets/about/flower-valley.webp')" data-cap="Me at my second home"><img src="./assets/about/flower-valley.webp" alt="Asmit standing with arms spread wide in a green, flower-filled valley beneath misty cliffs" loading="lazy" /></figure>
+          <figure class="sc-slide" style="--img:url('./assets/about/high-altitude.webp')" data-cap="Me at my second home"><img src="./assets/about/high-altitude.webp" alt="Asmit posing on a mountain trail with snow-capped peaks and clouds behind him" loading="lazy" /></figure>
+          <figure class="sc-slide" style="--img:url('./assets/about/mountain-portrait.webp')" data-cap="Me at my second home"><img src="./assets/about/mountain-portrait.webp" alt="Asmit smiling in sunglasses with green hills behind him" loading="lazy" /></figure>
+          <figure class="sc-slide" style="--img:url('./assets/about/stream-camera.webp')" data-cap="Me at my second home"><img src="./assets/about/stream-camera.webp" alt="Asmit photographing a rushing mountain stream with a camera" loading="lazy" /></figure>
+          <figure class="sc-slide" style="--img:url('./assets/about/river-camp.webp')" data-cap="Me at my second home"><img src="./assets/about/river-camp.webp" alt="Asmit sitting on a boulder beside a forested river" loading="lazy" /></figure>
+          <figure class="sc-slide" style="--img:url('./assets/about/dhoti.webp')" data-cap="Me when I'm off the screen"><img src="./assets/about/dhoti.webp" alt="Asmit standing in a black shirt and white dhoti in front of a pink wall" loading="lazy" /></figure>
+          <figure class="sc-slide" style="--img:url('./assets/about/kurta.webp')" data-cap="Me when I'm off the screen"><img src="./assets/about/kurta.webp" alt="Asmit in a yellow kurta taking a mirror selfie" loading="lazy" /></figure>
+        </div>
+        <div class="sc-hud mono" aria-live="polite"><span id="scCount">01 / 08</span> <span id="scLabel">Me at my second home</span></div>
+        <button class="sc-btn prev" type="button" aria-label="Previous photo">‹</button>
+        <button class="sc-btn next" type="button" aria-label="Next photo">›</button>
+        <div class="sc-dots" id="scDots"></div>
+        <div class="sc-bar" id="scBar"></div>
+      </div></div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="reveal">
+      <h2 class="section-title"><small>// 02</small><span data-scramble>Experience &amp; Education</span></h2>
+      <div class="timeline">
+        <article class="tl-item">
+          <span class="node"></span>
+          <div class="tl-card hud">
+            <div class="tl-head"><h3>Techno-Functional Apprentice</h3><time>Mar 2026 – Aug 2026</time></div>
+            <p class="org">AppseAI · Kolkata, India</p>
+            <ul class="points">
+              <li>Designed and built approximately 100 integration workflows connecting SAP, Microsoft Dynamics 365 Business Central, HubSpot, Shopify and other third-party apps.</li>
+              <li>Wrote custom JavaScript for data transformation, business rules, API interactions and workflow automation.</li>
+              <li>Integrated OpenAI-powered capabilities into automated workflows for AI-enabled business processes.</li>
+              <li>Tested, troubleshot and debugged integrations, API calls and data synchronisation across systems.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="tl-item">
+          <span class="node"></span>
+          <div class="tl-card hud">
+            <div class="tl-head"><h3>B.Tech, Computer Science &amp; Engineering (AI &amp; ML)</h3><time>Sep 2022 – Jun 2026</time></div>
+            <p class="org">MCKV Institute of Engineering · affiliated to MAKAUT</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="reveal">
+      <h2 class="section-title"><small>// 03</small><span data-scramble>Technical Skills</span></h2>
+      <div class="skill-grid">
+        <div class="hud skill-card"><h3><i>⌘</i> Programming Languages</h3><ul class="chips"><li>Python</li><li>C++</li><li>JavaScript</li></ul></div>
+        <div class="hud skill-card"><h3><i>◉</i> Machine Learning &amp; Computer Vision</h3><ul class="chips"><li>Machine Learning</li><li>Deep Learning</li><li>Computer Vision</li><li>Object Detection</li><li>Object Tracking</li></ul></div>
+        <div class="hud skill-card wide"><h3><i>⬢</i> AI/ML Libraries &amp; Frameworks</h3><ul class="chips"><li>PyTorch</li><li>YOLO</li><li>Ultralytics</li><li>OpenCV</li><li>Roboflow</li><li>Supervision</li><li>SymPy</li><li>NumPy</li></ul></div>
+        <div class="hud skill-card"><h3><i>✦</i> LLM &amp; AI Application Development</h3><ul class="chips"><li>LLM APIs</li><li>OpenAI Integration</li><li>Prompt Engineering</li></ul></div>
+        <div class="hud skill-card"><h3><i>⇄</i> Backend &amp; APIs</h3><ul class="chips"><li>FastAPI</li><li>Django</li><li>Node.js</li><li>REST APIs</li></ul></div>
+        <div class="hud skill-card"><h3><i>▤</i> Databases</h3><ul class="chips"><li>PostgreSQL</li><li>MySQL</li><li>Redis</li></ul></div>
+        <div class="hud skill-card"><h3><i>▣</i> Frontend</h3><ul class="chips"><li>Next.js</li><li>Vue.js</li><li>HTML</li><li>CSS</li></ul></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="reveal">
+      <h2 class="section-title"><small>// 04</small><span data-scramble>Featured Projects</span></h2>
+
+      <div class="project-grid">
+        <article class="project hud tilt">
+          <div class="shot art">
+            <svg viewBox="0 0 400 250" role="img" aria-label="Animated top-down tactical map of a football pitch with two teams and a passing ball">
+              <g fill="none" stroke="currentColor" stroke-opacity=".35" stroke-width="1.2">
+                <rect x="20" y="22" width="360" height="206" rx="3" fill="rgba(52,211,153,.05)"/>
+                <path d="M200 22V228"/><circle cx="200" cy="125" r="26"/>
+                <rect x="20" y="72" width="50" height="106"/><rect x="20" y="100" width="19" height="50"/>
+                <rect x="330" y="72" width="50" height="106"/><rect x="361" y="100" width="19" height="50"/>
+              </g>
+              <path class="pass" d="M210 100 L282 128 L262 62 L210 100" fill="none" stroke="currentColor" stroke-opacity=".7" stroke-width="1.4"/>
+              <g fill="currentColor">
+                <g class="pl" style="--dx:7px;--dy:-4px;--d:3.4s"><circle cx="92" cy="125" r="5"/></g>
+                <g class="pl" style="--dx:-5px;--dy:6px;--d:4.1s"><circle cx="140" cy="76" r="5"/></g>
+                <g class="pl" style="--dx:6px;--dy:5px;--d:3.1s"><circle cx="150" cy="172" r="5"/></g>
+                <g class="pl" style="--dx:8px;--dy:-3px;--d:3.8s"><circle cx="210" cy="100" r="5"/></g>
+                <g class="pl" style="--dx:-6px;--dy:-6px;--d:4.4s"><circle cx="226" cy="156" r="5"/></g>
+                <g class="pl" style="--dx:5px;--dy:7px;--d:3.6s"><circle cx="262" cy="62" r="5"/></g>
+                <g class="pl" style="--dx:-7px;--dy:4px;--d:4.2s"><circle cx="282" cy="128" r="5"/></g>
+                <g class="pl" style="--dx:6px;--dy:-5px;--d:3.3s"><circle cx="300" cy="192" r="5"/></g>
+              </g>
+              <g fill="#8b5cf6">
+                <g class="pl" style="--dx:-6px;--dy:5px;--d:3.7s"><circle cx="122" cy="100" r="5"/></g>
+                <g class="pl" style="--dx:5px;--dy:-6px;--d:4.3s"><circle cx="172" cy="126" r="5"/></g>
+                <g class="pl" style="--dx:-4px;--dy:7px;--d:3.2s"><circle cx="190" cy="56" r="5"/></g>
+                <g class="pl" style="--dx:7px;--dy:3px;--d:4s"><circle cx="238" cy="88" r="5"/></g>
+                <g class="pl" style="--dx:-6px;--dy:-4px;--d:3.9s"><circle cx="252" cy="172" r="5"/></g>
+                <g class="pl" style="--dx:5px;--dy:6px;--d:3.5s"><circle cx="304" cy="104" r="5"/></g>
+                <g class="pl" style="--dx:-5px;--dy:-5px;--d:4.5s"><circle cx="332" cy="142" r="5"/></g>
+                <circle cx="368" cy="125" r="5"/>
+              </g>
+              <circle cx="200" cy="212" r="3.4" fill="#fbbf24"/>
+              <circle class="ball" cx="0" cy="0" r="3.6" fill="#fff"/>
+              <text x="24" y="242" font-family="JetBrains Mono, monospace" font-size="8" fill="currentColor" opacity=".7">TACTICAL MAP · 2D PROJECTION</text>
+            </svg>
+            <span class="badge live">● LIVE</span>
+          </div>
+          <div class="p-body">
+            <h3>Football Match Analysis &amp; Tactical Map</h3>
+            <p>A computer vision pipeline that detects and tracks players, referees and the ball in match footage, assigns teams, and renders a live tactical map. Rebuilt from scratch with a clean architecture and 62 automated tests, then deployed as a Streamlit app.</p>
+            <ul class="tags"><li>Python</li><li>YOLO</li><li>Ultralytics</li><li>OpenCV</li><li>Roboflow</li><li>Supervision</li><li>Streamlit</li></ul>
+            <div class="links">
+              <a class="btn primary sm" href="https://football-tactical-map-analysis.streamlit.app/" target="_blank" rel="noopener"><span>Live demo ↗</span></a>
+              <a class="btn ghost sm" href="https://github.com/Asmit-123/football-tactical-map" target="_blank" rel="noopener"><span>Code</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project hud tilt">
+          <div class="shot art">
+            <svg viewBox="0 0 400 250" role="img" aria-label="Animated math expressions">
+              <g class="mf" font-family="JetBrains Mono, monospace" fill="currentColor">
+                <text x="24" y="52" font-size="22">∫ x² dx = x³/3 + C</text>
+                <text x="120" y="100" font-size="20">d/dx sin(x) = cos(x)</text>
+                <text x="40" y="150" font-size="22">Σ 1/n² = π²/6</text>
+                <text x="150" y="200" font-size="20">solve(x²-5x+6, x)</text>
+                <text x="290" y="48" font-size="18" opacity=".7">[2, 3] ✓</text>
+              </g>
+            </svg>
+          </div>
+          <div class="p-body">
+            <h3>MathForge</h3>
+            <p>An AI-powered generator and solver for math questions across configurable topics, difficulty levels and answer formats. LLM solutions are checked with SymPy symbolic computation, and a multi-provider architecture lets you swap models and generation settings.</p>
+            <ul class="tags"><li>Python</li><li>FastAPI</li><li>SymPy</li><li>NumPy</li><li>LLM APIs</li><li>uv</li></ul>
+            <div class="links"><a class="btn primary sm" href="https://github.com/Asmit-123/MathForge" target="_blank" rel="noopener"><span>Code ↗</span></a></div>
+          </div>
+        </article>
+
+        <article class="project hud tilt">
+          <div class="shot art">
+            <svg viewBox="0 0 400 250" role="img" aria-label="Animated line chart">
+              <defs><linearGradient id="ag" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="currentColor" stop-opacity=".35"/><stop offset="1" stop-color="currentColor" stop-opacity="0"/></linearGradient></defs>
+              <g stroke="currentColor" stroke-opacity=".15"><path d="M0 60H400M0 120H400M0 180H400"/></g>
+              <path d="M0 200 L40 180 L80 190 L120 150 L160 160 L200 110 L240 130 L280 80 L320 95 L360 50 L400 60 L400 250 L0 250Z" fill="url(#ag)"/>
+              <path class="line" d="M0 200 L40 180 L80 190 L120 150 L160 160 L200 110 L240 130 L280 80 L320 95 L360 50 L400 60" fill="none" stroke="currentColor" stroke-width="3"/>
+            </svg>
+            <span class="badge live">● LIVE</span>
+          </div>
+          <div class="p-body">
+            <h3>Mutual Fund Analyzer</h3>
+            <p>A full-stack app that retrieves mutual fund data and generates AI-powered analysis from it. FastAPI handles data retrieval and LLM integration, and a Next.js interface presents the results.</p>
+            <ul class="tags"><li>Python</li><li>FastAPI</li><li>Next.js</li><li>LLM Integration</li></ul>
+            <div class="links">
+              <a class="btn primary sm" href="https://mutual-fund-analyzer-tau.vercel.app/" target="_blank" rel="noopener"><span>Live demo ↗</span></a>
+              <a class="btn ghost sm" href="https://github.com/Asmit-123/Mutual-Fund-Analyzer" target="_blank" rel="noopener"><span>Code</span></a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="sub-title">More builds</h3>
+      <div class="mini-grid" id="moreBuilds">
+        <a class="mini hud" href="https://github.com/Asmit-123/SnapGram" target="_blank" rel="noopener"><b>SnapGram</b><p>Web-based social media app, an Instagram-style clone.</p><span>TypeScript</span></a>
+        <a class="mini hud" href="https://github.com/Asmit-123/AgroPredict" target="_blank" rel="noopener"><b>AgroPredict</b><p>Predictive analytics UI helping farmers and planners make informed decisions.</p><span>CSS</span></a>
+        <a class="mini hud" href="https://github.com/Asmit-123/Nurse-Scheduling-Algorithm-using-Genetic-Algorithm" target="_blank" rel="noopener"><b>Nurse Scheduling (GA)</b><p>Shift scheduling optimised with a genetic algorithm.</p><span>Python</span></a>
+        <a class="mini hud" href="https://github.com/Asmit-123/Real-Estate-App" target="_blank" rel="noopener"><b>Real Estate App</b><p>Responsive listings app with search, filtering and property details.</p><span>JavaScript</span></a>
+        <div class="mini hud tinker"><b>Currently tinkering</b><p>Work in progress</p><div class="wip" aria-hidden="true"><i></i></div><span>robotics · IoT</span></div>
+      </div>
+    </section>
+
+
+    <!-- GALLERY TEASER -->
+    <section id="photos" class="reveal">
+      <h2 class="section-title"><small>// 05</small><span data-scramble>Gallery</span></h2>
+      <div class="g-teaser hud">
+        <div class="g-copy">
+          <p>When I'm not building, I'm usually out with a camera. This is a growing collection of frames from my travels.</p>
+          <a class="btn primary" href="gallery.html"><span>Visit my gallery →</span></a>
+        </div>
+        <a class="g-strip" href="gallery.html" aria-label="Open the gallery">
+          <figure><img src="./assets/gallery/thumb/alpine-chough-1.webp" alt="Alpine chough perched on a rock" loading="lazy" width="640" height="640" /><figcaption>FRAME 01</figcaption></figure>
+          <figure><img src="./assets/gallery/thumb/large-yeoman-1.webp" alt="Large yeoman butterfly with orange wings resting on gravel" loading="lazy" width="640" height="427" /><figcaption>FRAME 02</figcaption></figure>
+          <figure><img src="./assets/gallery/thumb/orb-weaver-spider-1.webp" alt="Orb-weaver spider at the centre of its web" loading="lazy" width="427" height="640" /><figcaption>FRAME 03</figcaption></figure>
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="reveal">
+      <h2 class="section-title"><small>// 06</small><span data-scramble>Contact</span></h2>
+      <div class="terminal hud">
+        <div class="t-bar"><i></i><i></i><i></i><span>asmit@portfolio:~</span></div>
+        <div class="t-body">
+          <p><span class="prompt">$</span> whoami</p>
+          <p class="out">Asmit Bhattacharyya, AI/ML engineer, Kolkata</p>
+          <p><span class="prompt">$</span> status</p>
+          <p class="out">open to internships, full-time roles and collaborations</p>
+          <p><span class="prompt">$</span> contact --email</p>
+          <p class="out"><a href="mailto:asmit.voyage@gmail.com">asmit.voyage@gmail.com</a> <button class="copy" id="copyEmail" type="button">copy</button></p>
+        </div>
+      </div>
+      <div class="cta center">
+        <a class="btn primary" href="mailto:asmit.voyage@gmail.com"><span>Say hello</span></a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/asmit-bhattacharyya-37742442a" target="_blank" rel="noopener"><span>LinkedIn</span></a>
+        <a class="btn ghost" href="https://github.com/Asmit-123" target="_blank" rel="noopener"><span>GitHub</span></a>
+        <a class="btn ghost" href="https://www.instagram.com/being.sojourner/" target="_blank" rel="noopener"><span>Instagram</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer><p>© <span id="year">2026</span> Asmit Bhattacharyya · Built with HTML, CSS &amp; vanilla JS</p><p class="foot-links"><a href="gallery.html">Visit the Gallery</a> · <span>Press <kbd>Ctrl</kbd> <kbd>K</kbd> for quick navigation</span></p></footer>
+
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lb-close" id="lbClose" type="button" aria-label="Close">×</button>
+    <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="Previous">‹</button>
+    <img id="lbImg" alt="" />
+    <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Next">›</button>
+    <p id="lbCap"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

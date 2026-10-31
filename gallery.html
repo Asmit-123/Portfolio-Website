@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Asmit Bhattacharyya</title>
+  <meta name="description" content="A growing collection of photographs from Asmit Bhattacharyya's travels." />
+  <meta property="og:title" content="Gallery | Asmit Bhattacharyya" />
+  <meta property="og:description" content="A growing collection of photographs from my travels." />
+  <meta property="og:image" content="https://asmit-123.github.io/Portfolio-Website/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#05070d" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2305070d'/%3E%3Crect x='3' y='3' width='94' height='94' rx='20' fill='none' stroke='%2322d3ee' stroke-width='4'/%3E%3Ctext x='50' y='68' font-size='54' font-family='monospace' font-weight='700' text-anchor='middle' fill='%2322d3ee'%3EA%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="glow" id="glow" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="index.html"><span class="bracket">&lt;</span>asmit<span class="bracket">/&gt;</span></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#about"><i>01</i>About</a></li>
+        <li><a href="index.html#projects"><i>04</i>Projects</a></li>
+        <li><a class="active" href="gallery.html" aria-current="page"><i>05</i>Gallery</a></li>
+        <li><a href="index.html#contact"><i>06</i>Contact</a></li>
+        <li><button class="kbd" id="paletteBtn" type="button" aria-label="Open quick navigation">Ctrl K</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="bs-head">
+      <a class="back" href="index.html">&lt; back to portfolio</a>
+      <h1 style="margin-top:18px"><span class="grad" data-scramble>Gallery</span></h1>
+      <p>A growing collection of photographs from my travels. Open any frame to see it full size, along with the camera settings from the original file.</p>
+      <p class="bs-count" id="bsCount" aria-live="polite"></p>
+      <div class="bs-filters" id="bsFilters" role="group" aria-label="Filter by category"></div>
+    </section>
+    <div class="bs-grid" id="bsGrid"></div>
+    <noscript><p style="color:var(--muted)">This page needs JavaScript to show the photo grid.</p></noscript>
+  </main>
+
+  <footer><p>© <span id="year">2026</span> Asmit Bhattacharyya · Photos by me</p><p class="foot-links"><a href="index.html">Back to the portfolio</a> · <span>Press <kbd>Ctrl</kbd> <kbd>K</kbd> for quick navigation</span></p></footer>
+
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lb-close" id="lbClose" type="button" aria-label="Close">×</button>
+    <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="Previous">‹</button>
+    <img id="lbImg" alt="" />
+    <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Next">›</button>
+    <p id="lbCap"></p>
+  </div>
+  <script src="script.js"></script>
+  <script src="gallery.js"></script>
+</body>
+</html>
